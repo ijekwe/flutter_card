@@ -14,9 +14,10 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
-                radius: 50.0,
+                radius: 60.0,
                 backgroundImage: AssetImage('images/boondocks.jpeg'),
               ),
               Text(
@@ -37,45 +38,43 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
               Card(
-                color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child: Padding(
-                  padding: EdgeInsets.all(25.0),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.phone,
+                  padding: EdgeInsets.all(10.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.teal.shade900,
+                    ),
+                    title: Text(
+                      '+1 9731234567',
+                      style: TextStyle(
                         color: Colors.teal.shade900,
+                        fontFamily: 'Pontano Sans',
+                        fontSize: 20.0,
                       ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
-                        '+1 9731234567',
-                        style: TextStyle(
-                          color: Colors.teal.shade900,
-                          fontFamily: 'Pontano Sans',
-                          fontSize: 20.0,
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 ),
               ),
               Card(
-                color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
+                child: Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: ListTile(
+                    leading: Icon(
                       Icons.email,
                       color: Colors.teal.shade900,
                     ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
+                    title: Text(
                       'abc@gmail.com',
                       style: TextStyle(
                         color: Colors.teal.shade900,
@@ -83,7 +82,7 @@ class MyApp extends StatelessWidget {
                         fontSize: 20.0,
                       ),
                     ),
-                  ],
+                  ),
                 ),
               ),
             ],
